@@ -1,0 +1,21 @@
+COPD_patient;Gender;Age;Severity_level_(estimated);Main_cause;SMOKERS_patient;Gender;Age;Span_of_habit_(years);Relevant notes;CONTROL_patient;Gender;Age
+1;M;92;2,3;SMOKING;1;M;35;12;;1;M;26
+2;M;75;2,3;SMOKING;2;M;27;3;Active smoker;2;F;17
+3;F;84;4;SOOT;3;M;72;30;Active smoker;3;F;29
+4;M;67;1,2;SMOKING;4;M;67;40;Active smoker with Diagnosed with COPD;4;F;52
+5;M;76;1,2;SMOKING;;;;;Active smoker with Diagnosed with COPD;5;M;53
+6;F;83;4;SOOT;;;;;;6;M;29
+7;F;103;4;SOOT;;;;;;7;M;67
+8;F;85;1,2;SOOT;;;;;;8;F;85
+9;F;72;1,2;SOOT;;;;;;9;M;74
+10;M;91;4;SMOKING;;;;;;10;M;88
+11;M;78;2;SMOKING;;;;;;;;
+12;M;86;2,3;SMOKING;;;;;;;;
+13;M;79;2,3;SMOKING;;;;;;;;
+14;F;58;2,3;SOOT;;;;;;;;
+15;F;78;1;SMOKING;;;;;;;;
+16;M;57;1;SMOKING;;;;;;;;
+17;M;53;1;SMOKING;;;;;;;;
+18;M;72;2,3;SMOKING;;;;;;;;
+19;M;84;2,3;SOOT;;;;;;;;
+20;F;55;1;SOOT;;;;;;;;
