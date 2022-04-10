@@ -79,3 +79,26 @@ En concaténant les signaux des 8 capteurs mesurant le même patient et en le co
 
 Ce qui est clairement meilleur que les résultats retrouvés pour chaque capteur indépendemment, une phase de features engineering ou data augmentation serait intéressante pour améliorer le résultat.  
 #### COPD-all-1D-signal
+A travers ce notebook, on a empilé les 8 signaux des capteurs et on les a directement mis comme entrée d'un CNN : 
+|   Algorithmes ou méthodes    |   Précision en test (%)    |
+|---            |:-:    |
+| CNN avec les signaux empilés | 91.67 |
+
+On a clairement d'excellent résultats en utilisant cette méthode, montrant clairement la corrélation qu'on peut avoir entre les différentes mesures de capteurs, et cette corrélation améliore énormément la classification par rapport à l'utilisation indépendante de chaque capteur. 
+#### COPD-all-1D-augmentation
+**Ce notebook est en cours de réalisation**
+
+A travers ce notebook on utilise plusieurs méthodes d'augmentation des données pour nous permettre d'améliorer les résultats des modèles précédemment utilisés, on utilise alors les méthodes d'augmentation de données suivantes : 
+- SMOTE
+- 
+##### SMOTE
+|   Algorithmes ou méthodes    |   Précision en test (%)    |
+|---            |:-:    |
+| CNN avec les signaux empilés | 91.67 |
+| CNN avec concaténation des signaux |  |
+|  |  |
+
+#### COPD-deepInsight
+On utilise dans ce notebook l'algorithme deep Insight qui permet de prendre les données qu'on a et les transformer en images pour les utiliser dans un CNN, la méthode n'a pas été efficace dans ce problème. 
+## Remarques
+## Conclusions
