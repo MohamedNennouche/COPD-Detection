@@ -25,3 +25,57 @@ On a principalement des notebook Jupyter et un fichier python :
 #### Modèles
 Tous les autres dossiers c'est les modèles de deep learning enregistrés durant leurs entraînements dans les différents notebook. 
 ## Performances atteintes
+### Fichiers
+#### COPD-cnn-classifier
+|   Algorithmes ou méthodes    |   Précision en test (%)    |
+|---                                |:-:    |
+| CNN avec les signaux restructurés sous forme d'images | 52.38 |
+#### COPD-one-1D-signal
+##### Capteurs indépendants
+|   Algorithmes ou méthodes    |   Précision en test (%)    |
+|---            |:-:    |
+| KNN capteur 1 | 97.44 |
+| KNN capteur 2 | 94.87 |
+| KNN capteur 3 | 97.44 |
+| KNN capteur 4 | 87.18 |
+| KNN capteur 5 | 87.18 |
+| KNN capteur 6 | 97.44 |
+| KNN capteur 7 | 97.44 |
+| KNN capteur 8 | 89.74 |
+| SVM capteur 1 | 89.74 |
+| SVM capteur 2 | 94.87 |
+| SVM capteur 3 | 92.31 |
+| SVM capteur 4 | 92.31 |
+| SVM capteur 5 | 80.05 |
+| SVM capteur 6 | 82.05 |
+| SVM capteur 7 | 84.62 |
+| SVM capteur 8 | 82.05 |
+| CNN capteur 1 | 58.33 |
+| CNN capteur 2 | 58.33 |
+| CNN capteur 3 | 58.33 |
+| CNN capteur 4 | 50    |
+| CNN capteur 5 | 54.17 |
+| CNN capteur 6 | 62.50 |
+| CNN capteur 7 | 54.17 |
+| CNN capteur 8 | 58.33 |
+Puis on a tenté de faire une méthode de hard voting et de soft voting entre les différents résultats des CNN qu'on a trouvé pour amélioré le résultat global, on a alors fait le vote entre : 
+- Les capteurs 1,2,3,4,5,6,7,8
+- Les capteurs 2,3,5,6,8
+##### Hard voting
+|   Algorithmes ou méthodes    |   Précision en test (%)    |
+|---            |:-:    |
+| Les capteurs 1,2,3,4,5,6,7,8 | 66.67 |
+| Les capteurs 2,3,5,6,8 | 75 |
+##### Soft voting
+|   Algorithmes ou méthodes    |   Précision en test (%)    |
+|---            |:-:    |
+| Les capteurs 1,2,3,4,5,6,7,8 | 62.50 |
+| Les capteurs 2,3,5,6,8 | 62.50 |
+##### En enchaînant les signaux
+En concaténant les signaux des 8 capteurs mesurant le même patient et en le considérant comme entrée du réseau de neurones
+|   Algorithmes ou méthodes    |   Précision en test (%)    |
+|---            |:-:    |
+| CNN avec concaténation des signaux | 70.83 |
+
+Ce qui est clairement meilleur que les résultats retrouvés pour chaque capteur indépendemment, une phase de features engineering ou data augmentation serait intéressante pour améliorer le résultat.  
+#### COPD-all-1D-signal
