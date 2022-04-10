@@ -25,13 +25,12 @@ On a principalement des notebook Jupyter et un fichier python :
 #### Modèles
 Tous les autres dossiers c'est les modèles de deep learning enregistrés durant leurs entraînements dans les différents notebook. 
 ## Performances atteintes
-### Fichiers
-#### COPD-cnn-classifier
+### COPD-cnn-classifier
 |   Algorithmes ou méthodes    |   Précision en test (%)    |
 |---                                |:-:    |
 | CNN avec les signaux restructurés sous forme d'images | 52.38 |
-#### COPD-one-1D-signal
-##### Capteurs indépendants
+### COPD-one-1D-signal
+#### Capteurs indépendants
 |   Algorithmes ou méthodes    |   Précision en test (%)    |
 |---            |:-:    |
 | KNN capteur 1 | 97.44 |
@@ -58,47 +57,48 @@ Tous les autres dossiers c'est les modèles de deep learning enregistrés durant
 | CNN capteur 6 | 62.50 |
 | CNN capteur 7 | 54.17 |
 | CNN capteur 8 | 58.33 |
+
 Puis on a tenté de faire une méthode de hard voting et de soft voting entre les différents résultats des CNN qu'on a trouvé pour amélioré le résultat global, on a alors fait le vote entre : 
 - Les capteurs 1,2,3,4,5,6,7,8
 - Les capteurs 2,3,5,6,8
-##### Hard voting
+#### Hard voting
 |   Algorithmes ou méthodes    |   Précision en test (%)    |
 |---            |:-:    |
 | Les capteurs 1,2,3,4,5,6,7,8 | 66.67 |
 | Les capteurs 2,3,5,6,8 | 75 |
-##### Soft voting
+#### Soft voting
 |   Algorithmes ou méthodes    |   Précision en test (%)    |
 |---            |:-:    |
 | Les capteurs 1,2,3,4,5,6,7,8 | 62.50 |
 | Les capteurs 2,3,5,6,8 | 62.50 |
-##### En enchaînant les signaux
+#### En enchaînant les signaux
 En concaténant les signaux des 8 capteurs mesurant le même patient et en le considérant comme entrée du réseau de neurones
 |   Algorithmes ou méthodes    |   Précision en test (%)    |
 |---            |:-:    |
 | CNN avec concaténation des signaux | 70.83 |
 
 Ce qui est clairement meilleur que les résultats retrouvés pour chaque capteur indépendemment, une phase de features engineering ou data augmentation serait intéressante pour améliorer le résultat.  
-#### COPD-all-1D-signal
+### COPD-all-1D-signal
 A travers ce notebook, on a empilé les 8 signaux des capteurs et on les a directement mis comme entrée d'un CNN : 
 |   Algorithmes ou méthodes    |   Précision en test (%)    |
 |---            |:-:    |
 | CNN avec les signaux empilés | 91.67 |
 
 On a clairement d'excellent résultats en utilisant cette méthode, montrant clairement la corrélation qu'on peut avoir entre les différentes mesures de capteurs, et cette corrélation améliore énormément la classification par rapport à l'utilisation indépendante de chaque capteur. 
-#### COPD-all-1D-augmentation
+### COPD-all-1D-augmentation
 **Ce notebook est en cours de réalisation**
 
 A travers ce notebook on utilise plusieurs méthodes d'augmentation des données pour nous permettre d'améliorer les résultats des modèles précédemment utilisés, on utilise alors les méthodes d'augmentation de données suivantes : 
 - SMOTE
 - 
-##### SMOTE
+#### SMOTE
 |   Algorithmes ou méthodes    |   Précision en test (%)    |
 |---            |:-:    |
 | CNN avec les signaux empilés | 91.67 |
 | CNN avec concaténation des signaux |  |
 |  |  |
 
-#### COPD-deepInsight
+### COPD-deepInsight
 On utilise dans ce notebook l'algorithme deep Insight qui permet de prendre les données qu'on a et les transformer en images pour les utiliser dans un CNN, la méthode n'a pas été efficace dans ce problème. 
 ## Remarques
 ## Conclusions
